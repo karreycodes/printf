@@ -165,7 +165,7 @@ int write_unsgnd(int is_negative, int ind,
 
 	if (precision > 0 && precision < length)
 		padd = ' ';
-	
+
 	while (precision > length)
 	{
 		buffer[--ind] = '0';
@@ -212,7 +212,7 @@ int write_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd, char extra_c, int padd_start)
 {
 	int i;
-	
+
 	if (width > length)
 	{
 		for (i = 3; i < width - length + 3; i++)

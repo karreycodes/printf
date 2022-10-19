@@ -12,7 +12,7 @@
  * eturn: Number of chars printed
  */
 int print_unsigned(va_list types, char buffer[],
-		int flags, int width, int precision, int size)
+	int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
@@ -140,7 +140,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	UNUSED(width);
 
 	num = convert_size_unsgnd(num, size);
-	
+
 	if (num == 0)
 		buffer[i--] = '0';
 
