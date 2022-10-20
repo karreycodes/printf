@@ -35,7 +35,7 @@ int handle_write_char(char c, char buffer[],
 
 		if (flags & F_MINUS)
 			return (write(1, &buffer[0], 1) +
-				        write(1, &buffer[BUFF_SIZE - i - 1], width - 1));
+					write(1, &buffer[BUFF_SIZE - i - 1], width - 1));
 		else
 			return (write(1, &buffer[BUFF_SIZE - i - 1], width - 1) +
 					write(1, &buffer[0], 1));
@@ -171,7 +171,7 @@ int write_unsgnd(int is_negative, int ind,
 		buffer[--ind] = '0';
 		length++;
 	}
-	
+
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
 		padd = '0';
 
